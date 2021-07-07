@@ -133,18 +133,14 @@
 </template>
 
 <script>
-import MenuComponent from "./components/menu.vue";
-import CarouselComponent from "./components/carousel.vue";
-import CardComponent from "./components/card.vue";
+import MenuComponent from "./components/menu.vue"; 
 import FooterComponent from "./components/footer.vue";
 
 export default {
    
   name: "",
   components: {
-    MenuComponent,
-    CarouselComponent,
-    CardComponent,
+    MenuComponent, 
     FooterComponent,
   },
 };

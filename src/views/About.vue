@@ -35,5 +35,43 @@
               </nav>
             </div>
           </div>
+
+
+
+
+            <div class="flex-none md:flex xl:flex lg:flex">
+  
+    
+
+ <card-component 
+   v-for="(item, key) in products"
+        :key="key"
+          :description="item.description"
+          :price="item.price"
+          :image="item.img"
+        ></card-component>
+
+   
+     
+  </div>
   </div>
 </template>
+
+
+<script>
+import itemlist from "/itemlist.json";
+import CardComponent from '@/components/card.vue';  
+
+export default {
+  data() {
+    return {
+      products: itemlist.items,
+    };
+  },
+  methods: {
+  },
+  components: { 
+    CardComponent,
+  }
+};
+</script>
