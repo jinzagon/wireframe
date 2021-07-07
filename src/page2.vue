@@ -101,7 +101,11 @@
     <div class="mx-auto">
 
     <menu-component></menu-component>
- 
+
+TEST
+    <carousel-component></carousel-component>
+ TEEESSST
+
     <!--<div class="caSrd w-1/4">
       <div class="bg-indigo-300 p-7">
         <img
@@ -114,19 +118,6 @@
     </div>-->
 
     </div>
-<section class="text-blueGray-700 ">
-      <div class="container flex flex-col items-center px-5 mx-auto">
-         
-      </div>
-
-       <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
-    </section>
 
     <footer-component></footer-component>
   </div>
@@ -135,19 +126,19 @@
 <script>
 import MenuComponent from "./components/menu.vue";
 import CarouselComponent from "./components/carousel.vue";
-import CardComponent from "./components/card.vue";
 import FooterComponent from "./components/footer.vue";
 
 export default {
-   
-  name: "",
+  name: 'page2',
   components: {
     MenuComponent,
     CarouselComponent,
-    CardComponent,
     FooterComponent,
   },
 };
+
+ 
+   
 </script>
 
 <style></style>
