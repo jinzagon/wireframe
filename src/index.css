@@ -2,3 +2,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.slick-dots li button:before {
+    font-size: 16px !important;
+}
+
+.txt-small{
+    position: fixed; 
+    bottom: 50px;
+}
+
+.custom-color{
+    color: #ce071e !important;
+}
