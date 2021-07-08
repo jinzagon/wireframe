@@ -1,7 +1,7 @@
 <template>
   <div class="home">
        
-       
+ 
 <carousel-component></carousel-component>
 
     <section class="text-blueGray-700 ">
@@ -11,7 +11,7 @@
             <div class="p-6">
               <img
                 class="object-cover object-center w-full mb-8 lg:h-48 md:h-36"
-                src="https://dummyimage.com/720x400/F3F4F7/8693ac"
+                src="https://source.unsplash.com/user/kimboslice305/likes/1azdaz"
                 alt="blog"
               />
             </div>
@@ -20,7 +20,7 @@
             <div class="p-6">
               <img
                 class="object-cover object-center w-full mb-8 lg:h-48 md:h-36"
-                src="https://dummyimage.com/720x400/F3F4F7/8693ac"
+                src="https://source.unsplash.com/user/kimboslice305/likes/azcrv"
                 alt="blog"
               />
             </div>
@@ -29,7 +29,7 @@
             <div class="p-6">
               <img
                 class="object-cover object-center w-full mb-8 lg:h-48 md:h-36"
-                src="https://dummyimage.com/720x400/F3F4F7/8693ac"
+                src="https://source.unsplash.com/user/kimboslice305/likes/ergregeg"
                 alt="blog"
               />
             </div>
@@ -51,11 +51,18 @@
     </section>
     <section>
       <div class="flex-none md:flex xl:flex lg:flex ">
-        <card-component class="lg:w-1/4"
+        
+        
+        
+        <card-component v-on:childToParent="onChildClick" v-on:increment="counter++"
+         class="lg:w-1/4"
           description="Vestibulum tincidunt a metus hendrer"
           price="23.23"
           image="https://spacejob.co.jp/wp-content/uploads/2021/03/revolt-164_6wVEHfI-unsplash-1024x683.jpg"
         ></card-component>
+
+
+        
         <card-component class="lg:w-1/4"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
           price="43.44"
@@ -76,10 +83,11 @@
 
 <div class="container flex flex-col items-center px-5 mx-auto">
         <div class="flex flex-col w-full  text-left lg:text-center">
-           <h1
+           <h1 
             class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter text-black lg:w-1/2 lg:text-2xl title-font custom custom-color"
           >
             <router-link to="/about">View All</router-link>
+            
  
           </h1> 
 
@@ -100,6 +108,17 @@ export default {
   components: { 
     CardComponent,
     CarouselComponent,
-  }
+  },
+  methods: {
+    onCardClick (value) {
+      this.fromCardComponent = value
+    }
+  },
+    data () {
+    return {
+      counter: 0,
+      fromCardComponent: '',  
+    }
+  },
 }
 </script>

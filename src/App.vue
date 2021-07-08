@@ -67,7 +67,7 @@
           >
             <li>
               <a href="#" class="  py-1 mr-1 text-sm font-semibold"
-                >0 items |</a
+                >{{ counter }} items |</a
               >
             </li>
             <li>
@@ -119,8 +119,8 @@
          
       </div>
 
-       <div id="app">
-    <div id="nav">
+       <div id="app" >
+    <div id="nav" class="hidden">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
